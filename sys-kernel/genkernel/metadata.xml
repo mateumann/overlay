@@ -6,5 +6,6 @@
 	</maintainer>
 	<use>
 		<flag name="firmware">Prefer system firmware <pkg>sys-kernel/linux-firmware</pkg> over local copy.</flag>
+		<flag name="yubikey">Enable disk unlocking with Yubikey.</flag>
 	</use>
 </pkgmetadata>

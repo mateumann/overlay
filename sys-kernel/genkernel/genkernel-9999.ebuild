@@ -87,7 +87,7 @@ HOMEPAGE="https://wiki.gentoo.org/wiki/Genkernel https://gitweb.gentoo.org/proj/
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT=""
-IUSE="ibm +firmware"
+IUSE="ibm +firmware +yubikey"
 
 # Note:
 # We need sys-devel/* deps like autoconf or automake at _runtime_
@@ -105,7 +105,8 @@ RDEPEND="${DEPEND}
 	sys-devel/automake
 	sys-devel/libtool
 	virtual/pkgconfig
-	firmware? ( sys-kernel/linux-firmware )"
+	firmware? ( sys-kernel/linux-firmware )
+	yubikey? ( sys-auth/ykpers )"
 
 if [[ ${PV} == 9999* ]]; then
 	DEPEND="${DEPEND} app-text/asciidoc"
