@@ -199,7 +199,7 @@ src_install() {
 	insinto /usr/share/genkernel
 	doins -r "${S}"/*
 
-	#fperms +x /usr/share/genkernel/gen_worker.sh
+	fperms +x /usr/share/genkernel/gen_worker.sh
 
 	newbashcomp "${FILESDIR}"/genkernel-4.bash "${PN}"
 	insinto /etc
